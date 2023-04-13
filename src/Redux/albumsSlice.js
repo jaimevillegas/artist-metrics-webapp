@@ -1,32 +1,32 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
-import { getTopArtists } from './artistActions';
+import { getArtistAlbums } from './artistActions';
 
 const initialState = {
-  topArtists: [],
+  artistAlbums: [],
   isLoading: false,
   errorMessage: '',
 };
 
-const artistSlice = createSlice({
-  name: 'topArtists',
+const albumsSlice = createSlice({
+  name: 'artistAlbums',
   initialState,
   extraReducers: (builder) => {
     builder
-      .addCase(getTopArtists.pending, (state) => {
+      .addCase(getArtistAlbums.pending, (state) => {
         state.isLoading = true;
       })
 
-      .addCase(getTopArtists.fulfilled, (state, action) => {
+      .addCase(getArtistAlbums.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.topArtists = action.payload;
+        state.artistAlbums = action.payload;
       })
 
-      .addCase(getTopArtists.rejected, (state, action) => {
+      .addCase(getArtistAlbums.rejected, (state, action) => {
         state.isLoading = false;
         state.errorMessage = action.payload;
       });
   },
 });
 
-export default artistSlice.reducer;
+export default albumsSlice;

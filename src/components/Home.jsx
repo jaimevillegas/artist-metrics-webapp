@@ -1,25 +1,23 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import getTopArtists from '../Redux/artistActions';
+// import { useEffect } from 'react';
+// import { useEffect } from 'react';
+// import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+// import { getArtistAlbums } from '../Redux/artistActions';
 import ArtistCard from './ArtistCard';
 
 const Home = () => {
   const topArtists = useSelector((state) => state.artists.topArtists);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getTopArtists());
-  }, []);
+  // const artistTag = useEffect(() => {
+  //   dispatch(getArtistAlbums('Pink Floyd'));
+  // });
 
-  console.log(topArtists);
+  // console.log(topArtists);
 
   return (
-    <>
-      <h1>
-        hello
-        {' '}
-      </h1>
-      {topArtists.artists.artist.map((artistItem) => (
+    <div>
+      {topArtists.map((artistItem) => (
         <ArtistCard
           key={artistItem.playcount}
           name={artistItem.name}
@@ -27,7 +25,9 @@ const Home = () => {
           listeners={artistItem.listeners}
         />
       ))}
-    </>
+
+      {/* {console.log(artistTag)} */}
+    </div>
 
   );
 };

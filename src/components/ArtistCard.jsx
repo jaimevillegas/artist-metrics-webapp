@@ -16,8 +16,8 @@ const ArtistCard = (props) => {
 
 ArtistCard.propTypes = {
   name: PropTypes.string.isRequired,
-  playcount: PropTypes.number.isRequired,
-  listeners: PropTypes.number.isRequired,
+  playcount: PropTypes.string.isRequired,
+  listeners: PropTypes.string.isRequired,
 };
 
 export default ArtistCard;
