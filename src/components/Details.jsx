@@ -1,5 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { getArtistAlbums, getArtistTracks, getArtistTags } from '../Redux/artistActions';
 // import { setArtist } from '../Redux/artistNameSlice';
@@ -11,6 +12,7 @@ const Details = (props) => {
   const dispatch = useDispatch();
   const topAlbums = useSelector((state) => state.albums.artistAlbums);
   const topTracks = useSelector((state) => state.tracks.artistTracks);
+  const navigate = useNavigate();
   // const topTags = useSelector((state) => state.tags.artistTags);
 
   useEffect(() => {
@@ -25,9 +27,9 @@ const Details = (props) => {
     dispatch(getArtistTags(artistName));
   }, []);
 
-  // const handleSetArtist = (artist) => {
-  //   dispatch(setArtist(artist));
-  // };
+  const handleGoBack = () => {
+    navigate('/');
+  };
 
   return (
     <>
@@ -42,9 +44,10 @@ const Details = (props) => {
       ))}
       {/* <h2>Top Tags</h2>
       <p key={topTags[0].name}>{topTags[0].name}</p>
-      <p key={topTags[1].name}>{topTags[1].name}</p> */}
+    <p key={topTags[1].name}>{topTags[1].name}</p> */}
 
       {/* <p>{topAlbums}</p> */}
+      <button type="button" onClick={handleGoBack}>Go Back</button>
 
     </>
   );

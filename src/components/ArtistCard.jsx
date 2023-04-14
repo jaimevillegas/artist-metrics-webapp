@@ -2,14 +2,8 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setArtist } from '../Redux/artistNameSlice';
-
-// Write a function to set a store value
-// const setStoreValue = (value) => {
-//   store.dispatch({
-//     type: 'SET_VALUE',
-//     payload: value,
-//   });
-// };
+import './Home.scss';
+import artistImage from './music-player.png';
 
 const ArtistCard = (props) => {
   const {
@@ -28,10 +22,14 @@ const ArtistCard = (props) => {
     // eslint-disable-next-line max-len
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <div onClick={handleClick} className="artist-container">
-      <p>{name}</p>
-      <p>{playcount}</p>
-      <p>{listeners}</p>
-      <hr />
+      <div className="artist-img">
+        <img src={artistImage} alt="music-player" />
+      </div>
+      <div className="artist-info">
+        <p className="artist-name">{name}</p>
+        <p className="artist-playcount">{playcount}</p>
+        <p className="artist-listeners">{listeners}</p>
+      </div>
     </div>
   );
 };
