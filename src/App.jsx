@@ -25,7 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route
             path="details"
-            element={<Details artistName="Judas Priest" />}
+            element={<Details artistName="caifanes" />}
           />
         </Routes>
 
