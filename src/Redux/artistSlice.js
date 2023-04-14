@@ -29,4 +29,4 @@ const artistSlice = createSlice({
   },
 });
 
-export default artistSlice.reducer;
+export default artistSlice;

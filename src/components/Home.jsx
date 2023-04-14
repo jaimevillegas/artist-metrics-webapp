@@ -7,13 +7,6 @@ import ArtistCard from './ArtistCard';
 
 const Home = () => {
   const topArtists = useSelector((state) => state.artists.topArtists);
-  // const dispatch = useDispatch();
-
-  // const artistTag = useEffect(() => {
-  //   dispatch(getArtistAlbums('Pink Floyd'));
-  // });
-
-  // console.log(topArtists);
 
   return (
     <div>
@@ -26,7 +19,6 @@ const Home = () => {
         />
       ))}
 
-      {/* {console.log(artistTag)} */}
     </div>
 
   );

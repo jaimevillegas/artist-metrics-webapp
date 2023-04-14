@@ -1,5 +1,13 @@
 import PropTypes from 'prop-types';
 
+// Write a function to set a store value
+// const setStoreValue = (value) => {
+//   store.dispatch({
+//     type: 'SET_VALUE',
+//     payload: value,
+//   });
+// };
+
 const ArtistCard = (props) => {
   const {
     name, playcount, listeners,

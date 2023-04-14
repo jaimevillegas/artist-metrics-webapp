@@ -1,12 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
+import logger from 'redux-logger';
 import artistSlice from './artistSlice';
 import albumsSlice from './albumsSlice';
 
+const rootReducer = {
+  artists: artistSlice.reducer,
+  albums: albumsSlice.reducer,
+};
+
 const store = configureStore({
-  reducer: {
-    artists: artistSlice,
-    albums: albumsSlice,
-  },
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;

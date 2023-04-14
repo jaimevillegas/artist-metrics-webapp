@@ -14,8 +14,7 @@ const getTopArtists = createAsyncThunk('artists/getTopArtists', async () => {
   }
 });
 
-const getArtistAlbums = createAsyncThunk('artists/getArtistInfo', async (artistName) => {
-  // console.log(artistName);
+const getArtistAlbums = createAsyncThunk('artists/getArtistAlbums', async (artistName) => {
   try {
     const response = await axios.get(URL_ARTIST_ALBUMS, {
       params: {
@@ -25,7 +24,7 @@ const getArtistAlbums = createAsyncThunk('artists/getArtistInfo', async (artistN
         format: 'json',
       },
     });
-    return response.data;
+    return response.data.topalbums.album;
   } catch (error) {
     return error;
   }
