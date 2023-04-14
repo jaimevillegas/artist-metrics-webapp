@@ -9,6 +9,7 @@ import Details from './components/Details';
 
 function App() {
   const topArtists = useSelector((state) => state.artists.topArtists);
+  const artistName = useSelector((state) => state.artistName);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,7 +26,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route
             path="details"
-            element={<Details artistName="caifanes" />}
+            element={<Details artistName={artistName} />}
           />
         </Routes>
 
