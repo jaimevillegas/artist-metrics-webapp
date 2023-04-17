@@ -5,6 +5,7 @@ import { getTopArtists } from './Redux/artistActions';
 
 import Home from './components/Home';
 import Details from './components/Details';
+import Search from './components/Search';
 
 function App() {
   const topArtists = useSelector((state) => state.artists.topArtists);
@@ -27,6 +28,10 @@ function App() {
           <Route
             path="details"
             element={<Details artistName={artistName} artistListens={artistListens} />}
+          />
+          <Route
+            path="search"
+            element={<Search />}
           />
         </Routes>
 

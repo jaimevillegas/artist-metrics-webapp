@@ -1,9 +1,17 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ArtistCard from './ArtistCard';
 import './Home.scss';
 
 const Home = () => {
   const topArtists = useSelector((state) => state.artists.topArtists);
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate('/search');
+  };
 
   return (
     <div className="home-container">
@@ -11,8 +19,7 @@ const Home = () => {
         <i className="fa-solid fa-bars" />
         <h1>Top Artists</h1>
         <div className="top-icons-container">
-          <i className="fa-solid fa-microphone" />
-          <i className="fa-solid fa-gear" />
+          <i onClick={handleSearch} className="fa-solid fa-magnifying-glass" />
         </div>
       </div>
 
