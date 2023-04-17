@@ -20,10 +20,24 @@ body {
   height: min-content;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #3a5e9b;
+  justify-content: space-between;
+}
+
+.top-icons-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
 .header-container h1 {
   text-align: center;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 20px;
   padding: 10px;
 }
 
@@ -33,41 +47,72 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
+  // background-color: $main-color;
 }
 
 .artist-container {
-  display: flex;
-  justify-content: flex-start;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
   align-items: center;
-  padding: 10px;
+  height: 180px;
+  background-color: $main-color;
+  text-align: center;
   // border: 1px solid red;
 }
 
-.artist-container:nth-child(odd) {
+.artist-container:nth-child(4n-2),
+.artist-container:nth-child(4n-3) {
+  background-color: #3a5e9b;
+}
+
+.artist-container:nth-child(4n-3) {
   background-color: #3a5e9b;
 }
 
 .artist-container:first-child {
   grid-column: span 2;
-  margin: 0;
-  height: 150px;
+  margin: auto;
+  align-items: center;
+  height: 250px;
   border: none;
+  border-bottom: 1px solid #3a5e9b;
+  width: 100%;
   padding: 60px;
+  background-color: $main-color;
 }
 
 .artist-container:first-child .artist-name {
-  color: black;
+  font-size: 26px;
+  font-weight: bold;
 }
 
 .artist-container:first-child .artist-img img {
   width: 100px;
 }
 
-.artist-img img {
-  width: 40px;
+.artist-img {
+  padding: 0;
+  margin: auto;
+  width: min-content;
 }
 
-.artist-info p {
+.artist-img img {
+  opacity: 0.5;
+  width: 60px;
+}
+
+.artist-name {
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: min-content;
+}
+
+.artist-playcount, .artist-listeners {
   font-size: 12px;
   font-weight: 300;
 }

@@ -25,11 +25,17 @@ const ArtistCard = (props) => {
       <div className="artist-img">
         <img src={artistImage} alt="music-player" />
       </div>
-      <div className="artist-info">
-        <p className="artist-name">{name}</p>
-        <p className="artist-playcount">{playcount}</p>
-        <p className="artist-listeners">{listeners}</p>
-      </div>
+      <p className="artist-name">{name}</p>
+      <p className="artist-playcount">
+        <i className="fa-solid fa-play" />
+        {'   '}
+        {playcount}
+      </p>
+      <p className="artist-listeners">
+        <i className="fa-solid fa-user" />
+        {' '}
+        {listeners}
+      </p>
     </div>
   );
 };
