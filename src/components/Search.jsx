@@ -27,7 +27,7 @@ const Search = () => {
             <input type="text" placeholder="Search" />
           </div>
         </div>
-        <button type="button">Search</button>
+        <button className="button-search" type="button">Search</button>
       </div>
     </>
   );

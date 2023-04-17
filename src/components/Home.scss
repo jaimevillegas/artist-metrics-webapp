@@ -165,3 +165,33 @@ body {
   width: max-content;
   display: inline-block;
 }
+
+.search-input-container {
+  margin: 20px auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-input-container input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: $main-color;
+}
+
+.button-search {
+  display: flex;
+  margin: auto;
+  text-align: center;
+  background-color: #3a5e9b;
+  border: none;
+  border-radius: 5px;
+  padding: 14px;
+  font-size: 26px;
+  color: white;
+}
