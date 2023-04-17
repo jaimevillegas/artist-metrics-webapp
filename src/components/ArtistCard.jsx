@@ -21,6 +21,10 @@ const ArtistCard = (props) => {
     dispatch(setListens(playcount));
     dispatch(clearAlbums());
     dispatch(clearTracks());
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
     navigate('/details');
   };
 

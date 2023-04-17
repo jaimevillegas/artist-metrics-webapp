@@ -15,7 +15,6 @@ main {
 }
 
 body {
-  // border: 1px solid green;
   background-color: $main-color;
   height: min-content;
 }
@@ -47,7 +46,6 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  // background-color: $main-color;
 }
 
 .artist-container {
@@ -60,7 +58,6 @@ body {
   height: 180px;
   background-color: $main-color;
   text-align: center;
-  // border: 1px solid red;
 }
 
 .artist-container:nth-child(4n-2),

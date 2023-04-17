@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getTopArtists } from './Redux/artistActions';
-// import { getTopArtists } from './Redux/artistActions';
 
 import Home from './components/Home';
 import Details from './components/Details';

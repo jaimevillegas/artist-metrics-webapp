@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
@@ -34,7 +32,8 @@ const Details = (props) => {
   const handleGoBack = () => {
     navigate('/');
   };
-
+  /* eslint-disable jsx-a11y/no-static-element-interactions */
+  /* eslint-disable jsx-a11y/click-events-have-key-events */
   return (
     <>
       <div className="header-container">
