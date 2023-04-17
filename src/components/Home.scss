@@ -93,6 +93,10 @@ body {
   width: 100px;
 }
 
+.selected-artist-image {
+  width: 100px;
+}
+
 .artist-img {
   padding: 0;
   margin: auto;
@@ -100,7 +104,7 @@ body {
 }
 
 .artist-img img {
-  opacity: 0.5;
+  opacity: 0.7;
   width: 60px;
 }
 
@@ -115,4 +119,52 @@ body {
 .artist-playcount, .artist-listeners {
   font-size: 12px;
   font-weight: 300;
+}
+
+.selected-artist-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 180px;
+}
+
+.details-artist-header {
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.albums-container h2,
+.tracks-container h2 {
+  background-color: #274780; 
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.albums-container p,
+.tracks-container p {
+  padding: 10px 15px;
+}
+
+.album-name-container,
+.track-name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.album-name-container:nth-child(odd),
+.track-name-container:nth-child(odd) {
+  background-color: #3a5e9b;
+}
+
+.album-name-container div,
+.track-name-container div {
+  display: flex;
+  align-items: center;
+}
+
+.album-name-p {
+  width: max-content;
+  display: inline-block;
 }

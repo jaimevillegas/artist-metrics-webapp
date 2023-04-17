@@ -5,6 +5,7 @@ import albumsSlice from './albumsSlice';
 import tracksSlice from './tracksSlice';
 import tagsSlice from './tagsSlice';
 import artistNameSlice from './artistNameSlice';
+import artistListensSlice from './artistListensSlice';
 
 const rootReducer = {
   artists: artistSlice.reducer,
@@ -12,6 +13,7 @@ const rootReducer = {
   tracks: tracksSlice.reducer,
   tags: tagsSlice.reducer,
   artistName: artistNameSlice,
+  artsitListens: artistListensSlice,
 };
 
 const store = configureStore({

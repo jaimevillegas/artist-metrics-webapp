@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { setArtist } from '../Redux/artistNameSlice';
+import { setListens } from '../Redux/artistListensSlice';
 import './Home.scss';
 import artistImage from './music-player.png';
 
@@ -15,6 +16,7 @@ const ArtistCard = (props) => {
 
   const handleClick = () => {
     dispatch(setArtist(name));
+    dispatch(setListens(playcount));
     navigate('/details');
   };
 
