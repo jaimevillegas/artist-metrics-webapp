@@ -5,6 +5,8 @@ import { setArtist } from '../Redux/artistNameSlice';
 import { setListens } from '../Redux/artistListensSlice';
 import './Home.scss';
 import artistImage from './music-player.png';
+import { clearAlbums } from '../Redux/albumsSlice';
+import { clearTracks } from '../Redux/tracksSlice';
 
 const ArtistCard = (props) => {
   const {
@@ -17,6 +19,8 @@ const ArtistCard = (props) => {
   const handleClick = () => {
     dispatch(setArtist(name));
     dispatch(setListens(playcount));
+    dispatch(clearAlbums());
+    dispatch(clearTracks());
     navigate('/details');
   };
 

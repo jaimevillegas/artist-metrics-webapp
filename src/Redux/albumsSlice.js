@@ -11,6 +11,13 @@ const initialState = {
 const albumsSlice = createSlice({
   name: 'artistAlbums',
   initialState,
+  reducers: {
+    clearAlbums: (state) => {
+      state.artistAlbums = [];
+      state.isLoading = false;
+      state.errorMessage = '';
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getArtistAlbums.pending, (state) => {
@@ -28,5 +35,7 @@ const albumsSlice = createSlice({
       });
   },
 });
+
+export const { clearAlbums } = albumsSlice.actions;
 
 export default albumsSlice;

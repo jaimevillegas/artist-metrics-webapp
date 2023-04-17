@@ -11,6 +11,13 @@ const initialState = {
 const artistSlice = createSlice({
   name: 'topArtists',
   initialState,
+  reducers: {
+    clearArtists: (state) => {
+      state.topArtists = [];
+      state.isLoading = false;
+      state.errorMessage = '';
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getTopArtists.pending, (state) => {
@@ -28,5 +35,7 @@ const artistSlice = createSlice({
       });
   },
 });
+
+export const { clearArtists } = artistSlice.actions;
 
 export default artistSlice;

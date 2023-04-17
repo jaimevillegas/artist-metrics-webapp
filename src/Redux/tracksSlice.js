@@ -11,6 +11,13 @@ const initialState = {
 const tracksSlice = createSlice({
   name: 'artistTracks',
   initialState,
+  reducers: {
+    clearTracks: (state) => {
+      state.artistTracks = [];
+      state.isLoading = false;
+      state.errorMessage = '';
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getArtistTracks.pending, (state) => {
@@ -28,5 +35,7 @@ const tracksSlice = createSlice({
       });
   },
 });
+
+export const { clearTracks } = tracksSlice.actions;
 
 export default tracksSlice;
