@@ -2,10 +2,10 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const API_KEY = '982b075711b41bd16b86b6567cab6087';
-const URL_TOP_ARTISTS = 'http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=982b075711b41bd16b86b6567cab6087&format=json&limit=21';
-const URL_ARTIST_ALBUMS = 'http://ws.audioscrobbler.com/2.0/?format=json&method=artist.gettopalbums';
-const URL_ARTIST_TRACKS = 'http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks';
-const URL_ARTIST_TAGS = 'http://ws.audioscrobbler.com/2.0/?method=artist.gettoptags';
+const URL_TOP_ARTISTS = 'https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=982b075711b41bd16b86b6567cab6087&format=json&limit=21';
+const URL_ARTIST_ALBUMS = 'https://ws.audioscrobbler.com/2.0/?format=json&method=artist.gettopalbums';
+const URL_ARTIST_TRACKS = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks';
+const URL_ARTIST_TAGS = 'https://ws.audioscrobbler.com/2.0/?method=artist.gettoptags';
 
 const getTopArtists = createAsyncThunk('artists/getTopArtists', async () => {
   try {
