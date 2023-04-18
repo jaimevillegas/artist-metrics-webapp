@@ -17,7 +17,7 @@ function App() {
     if (topArtists.length === 0) {
       dispatch(getTopArtists());
     }
-  }, []);
+  }, [dispatch, topArtists.length]);
 
   return (
     <div className="App">
