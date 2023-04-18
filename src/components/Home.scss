@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+$main-color: #4369b2;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
+
+main {
+  height: 100vh;
+}
+
+body {
+  background-color: $main-color;
+  height: min-content;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #3a5e9b;
+  justify-content: space-between;
+}
+
+.top-icons-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.header-container h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.topArtists-container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+
+.artist-container {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  height: 180px;
+  background-color: $main-color;
+  text-align: center;
+}
+
+.artist-container:nth-child(4n-2),
+.artist-container:nth-child(4n-3) {
+  background-color: #3a5e9b;
+}
+
+.artist-container:nth-child(4n-3) {
+  background-color: #3a5e9b;
+}
+
+.artist-container:first-child {
+  grid-column: span 2;
+  margin: auto;
+  align-items: center;
+  height: 250px;
+  border: none;
+  border-bottom: 1px solid #3a5e9b;
+  width: 100%;
+  padding: 60px;
+  background-color: $main-color;
+}
+
+.artist-name {
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: min-content;
+}
+
+.artist-container:first-child .artist-name {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.artist-img img {
+  opacity: 0.7;
+  width: 60px;
+}
+
+.artist-container:first-child .artist-img img {
+  width: 100px;
+}
+
+.selected-artist-image {
+  width: 100px;
+}
+
+.artist-img {
+  padding: 0;
+  margin: auto;
+  width: min-content;
+}
+
+.artist-playcount,
+.artist-listeners {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.selected-artist-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  height: 180px;
+}
+
+.details-artist-header {
+  text-transform: uppercase;
+  font-size: 26px;
+}
+
+.albums-container h2,
+.tracks-container h2 {
+  background-color: #274780;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.albums-container p,
+.tracks-container p {
+  padding: 10px 15px;
+}
+
+.album-name-container,
+.track-name-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.album-name-container:nth-child(odd),
+.track-name-container:nth-child(odd) {
+  background-color: #3a5e9b;
+}
+
+.album-name-container div,
+.track-name-container div {
+  display: flex;
+  align-items: center;
+}
+
+.album-name-p {
+  width: max-content;
+  display: inline-block;
+}
+
+.search-input-container {
+  margin: 20px auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-input-container input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 20px;
+  color: $main-color;
+}
+
+.button-search {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;
+  background-color: #3a5e9b;
+  border: none;
+  border-radius: 5px;
+  padding: 14px;
+  font-size: 26px;
+  color: white;
+}
