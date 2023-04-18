@@ -1,5 +1,4 @@
 import { configureStore } from '@reduxjs/toolkit';
-import logger from 'redux-logger';
 import artistSlice from './artistSlice';
 import albumsSlice from './albumsSlice';
 import tracksSlice from './tracksSlice';
@@ -18,7 +17,6 @@ const rootReducer = {
 
 const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;

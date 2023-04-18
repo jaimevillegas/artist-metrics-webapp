@@ -81,9 +81,22 @@ body {
   background-color: $main-color;
 }
 
+.artist-name {
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: min-content;
+}
+
 .artist-container:first-child .artist-name {
   font-size: 26px;
   font-weight: bold;
+}
+
+.artist-img img {
+  opacity: 0.7;
+  width: 60px;
 }
 
 .artist-container:first-child .artist-img img {
@@ -100,20 +113,8 @@ body {
   width: min-content;
 }
 
-.artist-img img {
-  opacity: 0.7;
-  width: 60px;
-}
-
-.artist-name {
-  font-size: 14px;
-  text-align: left;
-  font-weight: bold;
-  text-transform: uppercase;
-  width: min-content;
-}
-
-.artist-playcount, .artist-listeners {
+.artist-playcount,
+.artist-listeners {
   font-size: 12px;
   font-weight: 300;
 }
@@ -133,7 +134,7 @@ body {
 
 .albums-container h2,
 .tracks-container h2 {
-  background-color: #274780; 
+  background-color: #274780;
   text-transform: uppercase;
   font-size: 18px;
   padding: 6px;
