@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/jaimevillegas.github.io/artist-metrics-webapp/static/css/main.809e2782.css",
-    "main.js": "/jaimevillegas.github.io/artist-metrics-webapp/static/js/main.0e8adaf9.js",
+    "main.js": "/jaimevillegas.github.io/artist-metrics-webapp/static/js/main.6cbccd3b.js",
     "static/media/music-player.png": "/jaimevillegas.github.io/artist-metrics-webapp/static/media/music-player.f475cfe67ad8dda332ff.png",
     "index.html": "/jaimevillegas.github.io/artist-metrics-webapp/index.html",
     "main.809e2782.css.map": "/jaimevillegas.github.io/artist-metrics-webapp/static/css/main.809e2782.css.map",
-    "main.0e8adaf9.js.map": "/jaimevillegas.github.io/artist-metrics-webapp/static/js/main.0e8adaf9.js.map"
+    "main.6cbccd3b.js.map": "/jaimevillegas.github.io/artist-metrics-webapp/static/js/main.6cbccd3b.js.map"
   },
   "entrypoints": [
     "static/css/main.809e2782.css",
-    "static/js/main.0e8adaf9.js"
+    "static/js/main.6cbccd3b.js"
   ]
 }
