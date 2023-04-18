@@ -126,6 +126,19 @@ npm run build
 ```
 - this command will create a bunduled chunks of code inside `dist/` folder
 
+Run tests
+To run tests, run the following command:
+
+Example command:
+
+```
+Run "npm run test"
+```
+
+### Deployment
+
+This site is deployed using OnRender
+
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
