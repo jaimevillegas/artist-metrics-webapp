@@ -9,7 +9,7 @@ import artistImage from './music-player.png';
 
 const Details = (props) => {
   // eslint-disable-next-line react/prop-types
-  const { artistName, artistListens } = props;
+  const { artistName, artistListens = '' } = props;
 
   const dispatch = useDispatch();
   const topAlbums = useSelector((state) => state.albums.artistAlbums);
@@ -48,13 +48,16 @@ const Details = (props) => {
         <img className="selected-artist-image" src={artistImage} alt="artist" />
         <div className="selected-artist-info">
           <h1 className="details-artist-header">{artistName}</h1>
-          <p>
-            <i className="fa-solid fa-play" />
-            {' '}
-            Playcount:
-            {' '}
-            {artistListens}
-          </p>
+          {artistListens === '' ? <p>{'holi '}</p>
+            : (
+              <p>
+                <i className="fa-solid fa-play" />
+                {' '}
+                Playcount:
+                {' '}
+                {artistListens}
+              </p>
+            )}
         </div>
       </div>
       <div className="albums-container">
