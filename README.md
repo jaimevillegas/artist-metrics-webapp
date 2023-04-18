@@ -187,6 +187,8 @@ If you like this project leave a start for it.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+Original design idea by [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio).
+
 I would like to thank Microverse for helping us in the journey to become a Fullstack developer 🌹
 
 <p align="right"><a href="#readme-top">👆</a></p>
