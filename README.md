@@ -81,7 +81,7 @@
 
 You can watch the demonstration video here! --> https://drive.google.com/file/d/1sZT1K2rI48kFH2xp8rP98e7Ddyas6qRJ/view?usp=share_link
 
-You can enter to the live version here! --> https://artist-metrics-webapp.onrender.com/
+You can enter to the live version here! --> https://artist-metrics-webapp.onrender.com/artist-metrics-webapp
 
 <p align="right"><a href="#readme-top">👆</a></p>
 
