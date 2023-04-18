@@ -24,6 +24,7 @@ const Home = () => {
       </div>
 
       <div className="topArtists-container">
+        {topArtists.length === 0 && <h1>Loading</h1>}
         {topArtists.map((artistItem) => (
           <ArtistCard
             key={artistItem.playcount}
@@ -35,7 +36,6 @@ const Home = () => {
 
       </div>
     </div>
-
   );
 };
 
