@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/artist-metrics-webapp">
 
         <Routes>
           <Route path="/" element={<Home />} />

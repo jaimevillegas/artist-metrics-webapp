@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { getArtistAlbums, getArtistTracks, getArtistTags } from '../Redux/artistActions';
 import artistImage from './music-player.png';
-// import './Home.scss';
-// import { setArtist } from '../Redux/artistNameSlice';
 
 const Details = (props) => {
   // eslint-disable-next-line react/prop-types
